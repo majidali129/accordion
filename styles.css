@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  background-color: #7c7c7c;
+}
+
+/* project styles */
+
+header {
+  height: 200px;
+  background-image: url('/assets/images/background-pattern-mobile.svg');
+  background-position: 100% bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main {
+  margin-top: -10rem;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.accordin {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 3rem 1.5rem 1rem;
+  width: 90%;
+  margin: 0rem auto;
+  border: 1px solid gray;
+}
+
+.title__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title__wrapper span:has(img) {
+  width: 30px;
+  height: 30;
+}
+span:has(img) > img {
+  width: 100%;
+  height: 100%;
+}
+.title__wrapper > h1 {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  font-size: 2.5rem;
+  color: #311435;
+}
+
+.accordion__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.accordion__wrapper > .accortion__item:not(:last-child) {
+  border-bottom: 0.5px solid lightgray;
+}
+
+.accordin__item-header {
+  /* font-size: 1.8rem; */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 1px 15px;
+  border-radius: 3px;
+}
+
+.active {
+  border-top: 0.2px solid skyblue;
+  border-bottom: 0.2px solid skyblue;
+  box-shadow: 0px 0px 2px #000000a8;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 1.8rem 0rem 1.8rem 0rem;
+  background: inherit;
+  color: #302033;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.accordion__item-desc {
+  padding: 2.5rem 5px 3rem 5px;
+  font-size: 1.5rem;
+  font-family: serif;
+  opacity: 50%;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 238px;
+    background-image: url('/assets/images/background-pattern-desktop.svg');
+  }
+  main {
+    margin-top: -15rem;
+  }
+  .accordin {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid gray;
+  }
+  button {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    height: 280px;
+  }
+
+  .accordin {
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid gray;
+  }
+}
